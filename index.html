@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tab切换</title>
+		<script type="text/javascript" src="js/jquery.js"></script>
+	</head>
+	<body>
+
+<style type="text/css">
+*{margin:0;padding:0;font-size:12px;font-family:"宋体";}
+a{ text-decoration: none; color: #333;}
+a img{border:0;vertical-align:middle;}
+.wrapper{ width: 1190px; margin: 0 auto;}
+.mostspan{ margin-top:10px;}
+.mostspan span{ display: inline-block; width:110px; text-align:center; height:45px; line-height:45px; font-family:"微软雅黑"; color:#666; font-size:18px; cursor:pointer;}
+.mostspan span.current{ color:#C10100; border-bottom:2px solid #C10100;}
+.mostproduct{ border:1px solid #ddd; overflow:hidden; zoom:1;}
+.mostproduct dl{ float:left; width:197px; height:208px; padding:15px 0; border-right:1px solid #ddd; position:relative;}
+.mostproduct dl:last-child{ border-right:0;}
+.mostproduct dl dt img{ width:150px; height:150px;}
+.mostproduct dl dt{ margin-bottom:10px; text-align:center;}
+.mostproduct dl dd{ line-height:22px; padding:0 20px;}
+.mostproduct dl dd span{ color:#FF7700; font-family:"微软雅黑"; font-size:14px;}
+.mostproduct dl dd.empty{ position:absolute; left:0; top:0; background-color:#000; filter:alpha(Opacity=20); -moz-opacity:0.2; opacity:0.2; height:238px; width:197px; padding:0; display:none;}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".mostspan span").eq(0).addClass("current");
+	$(".mostproduct").eq(0).show().siblings(".mostproduct").hide();
+	$(".mostspan span").click(function(){
+		$(this).addClass("current").siblings("span").removeClass("current");
+		num=$(this).index();
+		$(".mostproduct").eq(num).show().siblings(".mostproduct").hide();
+		});
+		
+	$(".mostproduct").each(function(){
+		$(this).find("dl").mouseover(function(){
+			$(this).find(".empty").hide().parents("dl").siblings("dl").find(".empty").show();
+			}).mouseout(function(){
+				$(this).siblings("dl").find(".empty").hide();
+				});
+		});
+});
+</script>
+
+<div class="wrapper">
+ 	<div class="mostspan">
+    	<span>销量最多</span>
+    	<span>收藏最多</span>
+    	<span>评论最多</span>
+    </div>
+    <div class="mostproduct">
+    	<dl>
+            <dt><a href="#"><img src="img/1.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/2.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/3.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/4.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/5.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/6.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    </div>
+   <div class="mostproduct">
+    	<dl>
+            <dt><a href="#"><img src="img/7.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/8.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/9.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/10.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/11.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/12.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    </div>
+    <div class="mostproduct">
+    	<dl>
+            <dt><a href="#"><img src="img/13.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/14.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/15.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/16.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/17.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    	<dl>
+            <dt><a href="#"><img src="img/18.jpg" /></a></dt>
+            <dd><a href="#">亿嘉IJARLLOTOTO时尚......</a></dd>
+            <dd><span>259赞礼币</span></dd>
+            <dd class="empty"></dd>
+        </dl>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><br /><br />
+
+	</body>
+</html>
+
